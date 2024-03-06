@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 164.2 100% 95%;
+    --foreground: 164.2 5% 0%;
+    --card: 164.2 50% 90%;
+    --card-foreground: 164.2 5% 10%;
+    --popover: 164.2 100% 95%;
+    --popover-foreground: 164.2 100% 0%;
+    --primary: 164.2 85.7% 16.5%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 164.2 30% 70%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 126.19999999999999 30% 85%;
+    --muted-foreground: 164.2 5% 35%;
+    --accent: 126.19999999999999 30% 80%;
+    --accent-foreground: 164.2 5% 10%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 164.2 5% 90%;
+    --border: 164.2 30% 50%;
+    --input: 164.2 30% 18%;
+    --ring: 164.2 85.7% 16.5%;
+    --radius: 0.5rem;
+  }
+  .dark,
+  :root[class~="dark"] {
+    --background: 164.2 50% 5%;
+    --foreground: 164.2 5% 90%;
+    --card: 164.2 50% 0%;
+    --card-foreground: 164.2 5% 90%;
+    --popover: 164.2 50% 5%;
+    --popover-foreground: 164.2 5% 90%;
+    --primary: 164.2 85.7% 16.5%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 164.2 30% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 126.19999999999999 30% 15%;
+    --muted-foreground: 164.2 5% 60%;
+    --accent: 126.19999999999999 30% 15%;
+    --accent-foreground: 164.2 5% 90%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 164.2 5% 90%;
+    --border: 164.2 30% 18%;
+    --input: 164.2 30% 18%;
+    --ring: 164.2 85.7% 16.5%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1 {
+    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+  }
+
+  h2 {
+    @apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0;
+  }
+
+  h3 {
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+  }
+
+  h4 {
+    @apply scroll-m-20 text-xl font-semibold tracking-tight;
+  }
+
+  p {
+    @apply leading-7 [&:not(:first-child)]:mt-6;
+  }
+
+  blockquote {
+    @apply mt-6 border-l-2 pl-6 italic;
+  }
+
+  ul {
+    @apply my-6 ml-6 list-disc [&>li]:mt-2;
+  }
+
+  code {
+    @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
+  }
+
+  .lead {
+    @apply text-xl text-muted-foreground;
+  }
+
+  .muted {
+    @apply text-sm text-muted-foreground;
+  }
+
+  .large {
+    @apply text-lg font-semibold;
+  }
+
+  .small {
+    @apply text-sm font-medium leading-none;
+  }
+}
